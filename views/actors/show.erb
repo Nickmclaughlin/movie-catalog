@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> <%= params[:id] %></title>
+  </head>
+
+  <h1>Body of Work<h1>
+    <body>
+        <ol> <% @actor_info.each do |role| %>
+          <li> Movie: <a href ="/movies/<%= role["id"] %>">  <%= role["title"] %> </a>---Role: <%= role["character"] %>
+          </li>
+         <% end %>
+        </ol>
+    </body>
+</html>

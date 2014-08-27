@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> List of Actors / Actresses</title>
+  </head>
+
+  <h1>Actors / Actresses<h1>
+    <body>
+        <ol> <% @actors.each do |actor| %>
+          <li> <a href ="actors/<%= actor["id"] %>"><%= actor["name"] %>
+              </a>
+          </li>
+         <% end %>
+        </ol>
+    </body>
+</html>
