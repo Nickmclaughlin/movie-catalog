@@ -4,7 +4,7 @@
     <title> <% params[:id] %></title>
   </head>
 
-  <h1> <%= params[:id] %> <h1>
+  <h1> Movie Info <h1>
     <body>
       <ul>
         <li> Genre: <%= @movie_info[0]["genre"] %></li>
@@ -12,10 +12,10 @@
         <li> Rating: <%= @movie_info[0]["rating"] %></li>
 
       </ul>
-
+        <p>CAST</p>
         <ul> <% @movie_info.each do |movie| %>
 
-          <li> Actor: <a href ="/actors/<%= movie["actor_ind_id"] %>"> <%= movie["name"] %> </a> --Role: <%= movie["character"] %>
+          <li> <a href ="/actors/<%= movie["actor_ind_id"] %>"> <%= movie["name"] %> </a> --Role: <%= movie["character"] %>
 
           </li>
          <% end %>
